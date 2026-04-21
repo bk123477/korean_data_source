@@ -1,87 +1,87 @@
-# Korean Dataset Source Catalog Summary
+# 한국어 데이터셋 소스 카탈로그 요약
 
-## Scope
-- This catalog focuses on publicly discoverable Korean-language sources that can help build Korean-first text datasets with stronger local context.
-- The emphasis is on sources that improve Korean conversational style, honorific consistency, Korean cultural grounding, and domain-specific factual grounding.
-- I prioritized official Korean sources first, then public benchmark or mirror sources on Hugging Face and GitHub.
+## 개요
+- 이 카탈로그는 한국어 중심 텍스트 데이터셋 구축에 도움이 되는 공개 확인 가능 소스를 정리한 문서입니다.
+- 특히 한국어 대화체, 높임말 일관성, 한국 문화 맥락, 도메인별 사실 기반 강화를 위한 소스에 초점을 두었습니다.
+- 우선순위는 국내 공식 소스를 먼저 두고, 이후 Hugging Face와 GitHub의 공개 벤치마크 및 미러 소스를 보강하는 방식으로 정리했습니다.
 
-## Recommended domain map
-1. Conversation, honorifics, and everyday speech
-2. Social, culture, and history
-3. News, media, and summarization
-4. Education and STEM
-5. Legal and public administration
-6. Healthcare and medical knowledge
-7. Finance and business
-8. Commerce, reviews, and consumer language
-9. Language resources, dictionaries, and general Korean knowledge
-10. Safety, social norms, and toxicity
-11. Translation, parallel corpora, and accessibility
-12. Disaster, safety, and emergency communication
-13. Agriculture, food, and dietary culture
-14. User-generated web, blogs, and community text
+## 권장 도메인 구성
+1. 대화, 높임말, 일상 구어체
+2. 사회, 문화, 역사
+3. 뉴스, 미디어, 요약
+4. 교육, STEM
+5. 법률, 공공행정
+6. 헬스케어, 의료 지식
+7. 금융, 비즈니스
+8. 커머스, 리뷰, 소비자 언어
+9. 언어 자원, 사전, 일반 한국어 지식
+10. 안전, 사회 규범, 유해성
+11. 번역, 병렬 말뭉치, 접근성
+12. 재난, 안전, 긴급 커뮤니케이션
+13. 농업, 식품, 식문화
+14. 사용자 생성 웹, 블로그, 커뮤니티 텍스트
 
-## Best starting points
-- `AI Hub + 모두의 말뭉치` should be the core for high-quality Korean-first seed data.
-- `공공데이터포털 API` should be the core for updatable grounding data in law, tourism, culture, health, and public information.
-- `Hugging Face/GitHub` should be used for open benchmarks, mirrors, and quick experiments rather than as the only source of truth.
-- `국회/국회도서관/특허/한국학중앙연구원` 계열 API도 한국 특화 전문 문체와 제도/역사 grounding 확보에 꽤 중요합니다.
+## 우선 시작점
+- `AI Hub + 모두의 말뭉치`는 고품질 한국어 중심 시드 데이터의 핵심 축으로 보는 것이 좋습니다.
+- `공공데이터포털 API`는 법률, 관광, 문화, 보건, 공공 정보 분야에서 갱신 가능한 grounding 데이터의 핵심 축입니다.
+- `Hugging Face/GitHub`는 단독 진실원이라기보다 공개 벤치마크, 미러, 빠른 실험용 소스로 활용하는 것이 적절합니다.
+- `국회/국회도서관/특허/한국학중앙연구원` 계열 API도 한국 특화 전문 문체와 제도·역사 grounding 확보에 중요합니다.
 - 새로 확인된 강한 축은 `재난·안전`, `농식품·레시피`, `UGC/커뮤니티 웹텍스트`입니다.
-- 이번 라운드에서 특히 더 보강된 것은 `독립기념관`, `국가유산청 국립무형유산원`, `법제처 자치법규`, `식약처 의약품 안전정보`, `입시 Q&A`, `향토음식/전통주` 축입니다.
+- 이번 라운드에서 특히 더 보강된 축은 `독립기념관`, `국가유산청 국립무형유산원`, `법제처 자치법규`, `식약처 의약품 안전정보`, `입시 Q&A`, `향토음식/전통주`입니다.
 
-## Highest-priority sources by purpose
-- Conversation quality and honorifics:
+## 목적별 우선 소스
+- 대화 품질과 높임말:
   `AI Hub 한국어 대화`, `AI Hub 감성 대화 말뭉치`, `모두의 말뭉치 일상 대화`, `SNS 멀티턴 대화`
-- Korean cultural grounding:
+- 한국 문화 grounding:
   `한국언어문화 지식 그래프`, `일상 대화 말뭉치 추출 지식그래프`, `국어 역사 자료 말뭉치`, `한국관광공사 API`
-- General Korean written quality:
+- 일반 한국어 문어체 품질:
   `신문 말뭉치`, `문서 요약 말뭉치`, `글쓰기 원시 자료`, `글쓰기 첨삭 인스트럭션 말뭉치`
-- Domain-specialized QA:
+- 도메인 특화 QA:
   `법률 지식베이스`, `금융·법률 문서 기계독해`, `초거대 AI 헬스케어 질의응답`
-- Public and institutional grounding:
+- 공공·제도 grounding:
   `국회 회의록 API`, `OpenDART`, `특허실용신안 정보 검색`, `국가학술정보 OpenAPI`
-- Historical and heritage grounding:
+- 역사·문화유산 grounding:
   `독립운동가 인명사전`, `국내/국외 독립운동사적지`, `고문헌자료 문헌정보서비스`, `무형유산 기록화`
-- Reference and control layer:
+- 참조·통제 레이어:
   `한국어기초사전`, `표준국어대사전`, `NIKLex`, `유사 문장 말뭉치`
-- Accessibility and multilingual extension:
+- 접근성·다국어 확장:
   `한국수어-한국어 병렬 말뭉치`, `묵자-점자 병렬 말뭉치`, `한국어 학습자 말뭉치`, `한국어 다국어 병렬 말뭉치`
-- Emergency/public communication:
+- 긴급·공공 커뮤니케이션:
   `긴급재난문자`, `자연재난/사회재난/생활안전 국민행동요령`
-- Food and regional lifestyle:
+- 음식·지역 생활문화:
   `농업용어사전`, `인테러뱅`, `우리잡곡 웰빙 레시피`, `식품영양성분DB`
-- Internet-style Korean expansion:
+- 인터넷형 한국어 확장:
   `geulgyeol-blog-korean`, `DC_inside_comments`, `namu_wiki_512_char_seg`, `fineweb-2-edu-korean`
 
-## Access pattern notes
-- `AI Hub`: often downloadable only after login and approval, and some datasets show domestic-use restrictions.
-- `모두의 말뭉치`: request/approval flow is common; many entries provide preview and description before access.
-- `공공데이터포털`: good for APIs and metadata-rich structured sources; useful when storage is limited because you can query incrementally.
-- `Hugging Face/GitHub`: easiest for quick inspection, prototyping, and benchmark baselines, but license and provenance must be checked per dataset.
+## 접근 방식 메모
+- `AI Hub`: 로그인과 승인 이후 다운로드 가능한 경우가 많고, 일부 데이터셋은 국내 활용 제한이 표시됩니다.
+- `모두의 말뭉치`: 신청/승인 절차가 흔하며, 접근 전 미리보기와 설명을 제공하는 경우가 많습니다.
+- `공공데이터포털`: API 및 메타데이터가 풍부한 구조화 소스에 강점이 있어, 저장 공간이 제한적일 때 점진 조회 방식으로 활용하기 좋습니다.
+- `Hugging Face/GitHub`: 빠른 확인, 프로토타이핑, 벤치마크 기준선 확보에는 편하지만, 라이선스와 출처는 데이터셋별로 반드시 확인해야 합니다.
 
-## Practical collection strategy
-1. Start with metadata-only cataloging, not full downloads.
-2. Separate `raw source`, `instruction/reference`, and `evaluation` datasets.
-3. Use official sources first where Korean context quality matters most.
-4. Use APIs for dynamic domains such as law, finance, tourism, and public institutions.
-5. Use dictionaries and lexical resources to control honorifics, expression correction, and paraphrase generation.
+## 실무 수집 전략
+1. 전체 다운로드보다 메타데이터 중심 카탈로깅부터 시작합니다.
+2. `raw source`, `instruction/reference`, `evaluation` 데이터셋을 분리해 관리합니다.
+3. 한국 맥락 품질이 중요한 영역은 공식 소스를 우선 사용합니다.
+4. 법률, 금융, 관광, 공공기관처럼 동적으로 바뀌는 영역은 API 활용을 우선 검토합니다.
+5. 높임말 통제, 표현 교정, 패러프레이즈 생성에는 사전·어휘 자원을 함께 사용합니다.
 
-## Deliverables created
-- [Conversation sources](/Users/hongminki/Github/nvidia/test/data_source/00_conversation_honorifics/sources.md)
-- [Social and culture sources](/Users/hongminki/Github/nvidia/test/data_source/01_social_culture_history/sources.md)
-- [News and summarization sources](/Users/hongminki/Github/nvidia/test/data_source/02_news_media_summarization/sources.md)
-- [Education and STEM sources](/Users/hongminki/Github/nvidia/test/data_source/03_education_stem/sources.md)
-- [Legal and public sources](/Users/hongminki/Github/nvidia/test/data_source/04_legal_public/sources.md)
-- [Healthcare sources](/Users/hongminki/Github/nvidia/test/data_source/05_healthcare/sources.md)
-- [Finance sources](/Users/hongminki/Github/nvidia/test/data_source/06_finance_business/sources.md)
-- [Commerce and review sources](/Users/hongminki/Github/nvidia/test/data_source/07_commerce_reviews/sources.md)
-- [Language resource sources](/Users/hongminki/Github/nvidia/test/data_source/08_language_resources/sources.md)
-- [Safety and social norms sources](/Users/hongminki/Github/nvidia/test/data_source/09_safety_social_norms/sources.md)
-- [Translation and accessibility sources](/Users/hongminki/Github/nvidia/test/data_source/10_translation_accessibility/sources.md)
-- [Disaster and safety sources](/Users/hongminki/Github/nvidia/test/data_source/11_disaster_safety/sources.md)
-- [Agriculture and food sources](/Users/hongminki/Github/nvidia/test/data_source/12_agriculture_food/sources.md)
-- [User-generated web sources](/Users/hongminki/Github/nvidia/test/data_source/13_user_generated_web/sources.md)
+## 생성된 결과물
+- [대화 소스](data_source/00_conversation_honorifics/sources.md)
+- [사회·문화 소스](data_source/01_social_culture_history/sources.md)
+- [뉴스·요약 소스](data_source/02_news_media_summarization/sources.md)
+- [교육·STEM 소스](data_source/03_education_stem/sources.md)
+- [법률·공공 소스](data_source/04_legal_public/sources.md)
+- [헬스케어 소스](data_source/05_healthcare/sources.md)
+- [금융 소스](data_source/06_finance_business/sources.md)
+- [커머스·리뷰 소스](data_source/07_commerce_reviews/sources.md)
+- [언어 자원 소스](data_source/08_language_resources/sources.md)
+- [안전·사회 규범 소스](data_source/09_safety_social_norms/sources.md)
+- [번역·접근성 소스](data_source/10_translation_accessibility/sources.md)
+- [재난·안전 소스](data_source/11_disaster_safety/sources.md)
+- [농업·식품 소스](data_source/12_agriculture_food/sources.md)
+- [사용자 생성 웹 소스](data_source/13_user_generated_web/sources.md)
 
-## Limitation
-- I cannot autonomously keep working until `2026-04-21 07:00` after this turn ends or wait for token refill on my own.
-- To compensate, I created the catalog structure now so we have a solid base ready in the repository.
+## 한계
+- 이 턴이 끝난 뒤 `2026-04-21 07:00`까지 제가 자율적으로 계속 작업하거나, 토큰이 다시 채워질 때까지 스스로 대기할 수는 없습니다.
+- 대신 저장소 안에서 바로 이어서 확장할 수 있도록 카탈로그 구조를 먼저 정리해 두었습니다.
